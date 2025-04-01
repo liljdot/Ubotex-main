@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
                     <ul className={`menu menu-horizontal gap-6 text-primary px-1 hidden md:inline-flex ${openSans.className}`}>
                         <li><a className="xl:text-lg p-0">Home</a></li>
                         <li><a className="xl:text-lg p-0">Ubotex Ltd</a></li>
-                        <li><a className="xl:text-lg p-0">XO Wine Store</a></li>
+                        <li><DomainLink subDomain="xowine" className="xl:text-lg p-0">XO Wine Store</DomainLink></li>
                         <li><a className="xl:text-lg p-0">Evana Hotels</a></li>
                         <li><a className="xl:text-lg p-0">About Us</a></li>
                         <li><a className="xl:text-lg p-0">Contact Us</a></li>
