@@ -6,5 +6,6 @@
   name: "light";
   default: true;
   --color-primary: #0B4775;
+  --color-neutral: #FFFFFF;
   --color-base-content: #333F48;
 }
