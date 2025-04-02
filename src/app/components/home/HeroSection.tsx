@@ -1,18 +1,21 @@
 import blueprintBG from "@/app/assets/blueprint-bg.png"
+import wineStoreImage from "@/app/assets/wine-store-image.png"
+import hotelImage from "@/app/assets/hotel-image.png"
+import constructionImage from "@/app/assets/construction-image.png"
 import ActionButton from "../ActionButton"
 import { Open_Sans } from "next/font/google"
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 
 const openSans = Open_Sans({
     variable: '--font-open-sans',
     subsets: ["latin"]
 })
 
-const cardImage: React.FC<{image: string}> = ({image}) => {
+const CardImage: React.FC<{image: StaticImageData}> = ({image}) => {
 
     return (
-        <figure className="w-51 h-39">
-            <Image src={image} alt="our businesses" className="w-full h-full" placeholder="blur"/>
+        <figure className="flex shrink-0 w-51 h-39 md:w-93 md:h-100 bg-cover md:bg-center md:hover:bg-left-top bg-no-repeat md:hover:w-143 transition-all ease-in-out duration-300" style={{backgroundImage: `url(${image.src})`}}>
+            
         </figure>
     )
 }
@@ -38,7 +41,11 @@ const HeroSection: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-row"></div>
+                <div className="flex md:justify-center flex-row gap-2 overflow-x-scroll md:overflow-visible">
+                    <CardImage image={constructionImage}/>
+                    <CardImage image={hotelImage}/>
+                    <CardImage image={wineStoreImage}/>
+                </div>
             </section>
         </>
     )
