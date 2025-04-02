@@ -27,7 +27,7 @@ const DomainLink: React.FC<Props> = ({ className, subDomain, children }) => {
     }, [])
 
     return (
-        <Link href={"https://" + url} className={"" + className}>{children}</Link>
+        <Link href={"https://" + url} className={""+className}>{children}</Link>
     )
 }
 
