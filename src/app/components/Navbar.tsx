@@ -13,7 +13,7 @@ const openSans = Open_Sans({
 const Navbar: React.FC = () => {
 
     return (
-        <header className="w-full fixed bg-transparent/10 bg-clip-padding backdrop-filter backdrop-blur-2xl">
+        <header className="w-full fixed bg-transparent/10 bg-clip-padding backdrop-filter backdrop-blur-2xl z-1000">
             <div className="navbar shadow-sm px-8 py-4 md:py-8 max-w-450 mx-auto">
                 <div className="navbar-start">
                     <Link href={"/"} className="btn btn-ghost text-xl p-0 border">
