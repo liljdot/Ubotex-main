@@ -1,6 +1,7 @@
 import Image from "next/image";
 import HeroSection from "./components/home/HeroSection";
 import AchievementsSection from "./components/home/AchievmentsSection";
+import AboutSection from "./components/home/AboutSection";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <div className="max-w-450 mx-auto">
           <HeroSection />
           <AchievementsSection />
+          <AboutSection />
         </div>
       </main>
     </>
