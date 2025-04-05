@@ -23,7 +23,7 @@ interface BusinessCardProps {
 const BusinessCard: React.FC<BusinessCardProps> = ({ image, title, phrase, content, to, textColorClassName, bgColorClassName }) => {
 
     return (
-        <div className="card bg-base-100 w-full max-w-102.5 rounded-none shadow-sm">
+        <div className="card bg-base-100 w-full max-w-103 rounded-none shadow-sm">
             <figure className="relative w-full">
                 <Image
                     src={image}
