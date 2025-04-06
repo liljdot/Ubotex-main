@@ -35,7 +35,6 @@ const Navbar: React.FC = () => {
                             <li><a className="text-base p-0">XO Wine Store</a></li>
                             <li><a className="text-base p-0">Evana Hotels</a></li>
                             <li><a className="text-base p-0">About Us</a></li>
-                            <li><a className="text-base p-0">Contact Us</a></li>
                         </ul>
                     </div>
 
@@ -45,7 +44,6 @@ const Navbar: React.FC = () => {
                         <li><DomainLink subDomain="xowine" className="xl:text-lg p-0">XO Wine Store</DomainLink></li>
                         <li><a className="xl:text-lg p-0">Evana Hotels</a></li>
                         <li><a className="xl:text-lg p-0">About Us</a></li>
-                        <li><a className="xl:text-lg p-0">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
