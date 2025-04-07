@@ -23,17 +23,31 @@ interface BusinessCardProps {
 const BusinessCard: React.FC<BusinessCardProps> = ({ image, title, phrase, content, to, textColorClassName, bgColorClassName }) => {
 
     return (
-        <div className="card bg-base-100 w-full max-w-103 rounded-none shadow-sm">
-            <figure className="relative w-full">
-                <Image
-                    src={image}
-                    alt="Our businesses"
-                />
-            </figure>
-            <div className={`${bgColorClassName ? bgColorClassName : "bg-primary"} text-neutral text-center flex flex-col items-center px-8 py-12.5 ${openSans.className}`}>
-                <h2 className="card-title font-semibold">{title}</h2>
-                <h3 className="text-[0.75rem] font-semibold pt-2">{phrase}</h3>
-                <p className="text-sm/7 pt-4">{content}</p>
+        <div className={`card md:card-side ${bgColorClassName ? bgColorClassName : "bg-primary"} w-full md:w-180 lg:w-220 xl:w-259 max-w-103 md:max-w-180 lg:max-w-220 xl:max-w-259 md:h-93 lg:h-114 xl:h-133 md:items-center rounded-none md:rounded-lg shadow-sm md:left-[8%]`}>
+            {/* mobile only  */}
+            <div className="md:hidden">
+                <figure className="relative w-full">
+                    <Image
+                        src={image}
+                        alt="Our businesses"
+                    />
+                </figure>
+            </div>
+
+            {/* hidden on mobile  */}
+            <div className="hidden md:block relative md:w-70 lg:w-86 xl:w-101 h-full">
+                <figure className="absolute top-[50%] -translate-y-[50%] -left-[20%] md:w-90 lg:w-111 xl:w-129 md:h-71 lg:h-86 xl:h-101">
+                    <Image
+                        className=" rounded-lg"
+                        src={image}
+                        alt="Our businesses"
+                    />
+                </figure>
+            </div>
+            <div className={`${bgColorClassName ? bgColorClassName : "bg-primary"} md:w-110 lg:w-134 xl:w-158 text-neutral text-center md:text-left flex flex-col items-center md:items-start px-8 md:px-10 lg:px-14 xl:px-18 py-12.5 md:py-0 rounded-lg ${openSans.className}`}>
+                <h2 className="card-title md:text-xl lg:text-3xl xl:text-[43px] font-semibold">{title}</h2>
+                <h3 className="text-[0.75rem] md:text-base lg:text-lg xl:text-xl font-semibold pt-2">{phrase}</h3>
+                <p className="text-sm/7 xl:text-base/7 md:text-left pt-4">{content}</p>
                 <div className="card-actions pt-2.5">
                     <DomainActionButton to={to} className={`${textColorClassName ? textColorClassName : "text-primary"}`}>
                         Explore
@@ -48,14 +62,14 @@ const ServicesSection: React.FC = () => {
 
     return (
         <>
-            <section className="bg-neutraln flex flex-col pt-15 gap-6">
-                <div className="flex flex-col gap-1 px-10">
-                    <h4 className="text-xl text-primary font-medium">OUR SERVICES</h4>
+            <section className="bg-neutral flex flex-col pt-15 xl:pt-0 gap-6 md:gap-10 md:px-16 lg:px-26 xl:px-35">
+                <div className="flex flex-col gap-1 md:gap-3 px-10 md:px-0">
+                    <h4 className="text-xl md:text-3xl lg:text-5xl xl:text-7xl text-primary font-medium">OUR SERVICES</h4>
 
-                    <p className={"text-sm text-base-content " + openSans.className}>At Ubotex Limited, we are committed to excellence across multiple industries, delivering quality products and services to our customers.</p>
+                    <p className={"text-sm md:text-base md:font-semibold text-base-content " + openSans.className}>At Ubotex Limited, we are committed to excellence across multiple industries, delivering quality products and services to our customers.</p>
                 </div>
 
-                <div className="flex flex-col items-center gap-15">
+                <div className="flex flex-col items-center md:items-start gap-15 md:gap-20">
                     <BusinessCard
                         image={constructionCompanyImage}
                         title="UBOTEX LTD"
