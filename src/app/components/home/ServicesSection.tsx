@@ -18,12 +18,13 @@ interface BusinessCardProps {
     to: string
     textColorClassName?: string
     bgColorClassName?: string
+    reversed?: boolean
 }
 
-const BusinessCard: React.FC<BusinessCardProps> = ({ image, title, phrase, content, to, textColorClassName, bgColorClassName }) => {
+const BusinessCard: React.FC<BusinessCardProps> = ({ image, title, phrase, content, to, textColorClassName, bgColorClassName, reversed }) => {
 
     return (
-        <div className={`card md:card-side ${bgColorClassName ? bgColorClassName : "bg-primary"} w-full md:w-180 lg:w-220 xl:w-259 max-w-103 md:max-w-180 lg:max-w-220 xl:max-w-259 md:h-93 lg:h-114 xl:h-133 md:items-center rounded-none md:rounded-lg shadow-sm md:left-[8%]`}>
+        <div className={`card md:card-side ${bgColorClassName ? bgColorClassName : "bg-primary"} ${reversed && "md:flex-row-reverse"} w-full md:w-180 lg:w-220 xl:w-259 max-w-103 md:max-w-180 lg:max-w-220 xl:max-w-259 md:h-93 lg:h-114 xl:h-133 md:items-center rounded-none md:rounded-lg shadow-sm ${!reversed && "md:left-[8%]"}`}>
             {/* mobile only  */}
             <div className="md:hidden">
                 <figure className="relative w-full">
@@ -36,7 +37,7 @@ const BusinessCard: React.FC<BusinessCardProps> = ({ image, title, phrase, conte
 
             {/* hidden on mobile  */}
             <div className="hidden md:block relative md:w-70 lg:w-86 xl:w-101 h-full">
-                <figure className="absolute top-[50%] -translate-y-[50%] -left-[20%] md:w-90 lg:w-111 xl:w-129 md:h-71 lg:h-86 xl:h-101">
+                <figure className={`absolute top-[50%] -translate-y-[50%] ${reversed ? "-right-[20%]" : "-left-[20%]"} md:w-90 lg:w-111 xl:w-129 md:h-71 lg:h-86 xl:h-101`}>
                     <Image
                         className=" rounded-lg"
                         src={image}
@@ -76,6 +77,7 @@ const ServicesSection: React.FC = () => {
                         phrase="Your Trusted Partner in Quality Building Materials"
                         content="We provide top-quality building materials for strength, durability, and excellence in every project. As a leading distributor, we offer premium cement, durable rods, high-quality ceiling boards, stylish and secure doors, versatile fasteners, vibrant paints, and top-brand zinc for reliable roofing."
                         to="ubotexltd"
+                        reversed
                     />
 
                     <BusinessCard
@@ -96,6 +98,7 @@ const ServicesSection: React.FC = () => {
                         to="evanahotels"
                         textColorClassName="text-[#3C120F]"
                         bgColorClassName="bg-[#3C120F]"
+                        reversed
                     />
                 </div>
             </section>
