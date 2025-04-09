@@ -6,6 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Open_Sans } from "next/font/google"
 import DomainLink from "./DomainLink"
+import { useEffect, useState } from "react"
 
 const openSans = Open_Sans({
     variable: "--font-open-sans",
@@ -13,12 +14,30 @@ const openSans = Open_Sans({
 })
 
 const Navbar: React.FC = () => {
+    const [sectionInView, setSectionInView] = useState<string>("")
+
     const scrolltoSection = (id: string) => {
         const target = document.getElementById(id || "")
         if (target) {
             target.scrollIntoView({ behavior: "smooth", block: "start" })
         }
     }
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    console.log("in view")
+                    setSectionInView(entry.target.id)
+                } else {
+                    setSectionInView("")
+                }
+            })
+        }, { root: null, threshold: 0.5 })
+
+        const targetElement = document.getElementById("about")!
+        observer.observe(targetElement)
+    }, [])
 
     return (
         <header className="w-full fixed bg-transparent/10 bg-clip-padding backdrop-filter backdrop-blur-2xl z-1000">
@@ -51,7 +70,7 @@ const Navbar: React.FC = () => {
                         <li><a className="xl:text-lg p-0">Ubotex Ltd</a></li>
                         <li><DomainLink subDomain="xowine" className="xl:text-lg p-0">XO Wine Store</DomainLink></li>
                         <li><a className="xl:text-lg p-0">Evana Hotels</a></li>
-                        <li><a onClick={() => scrolltoSection("about")} className="xl:text-lg p-0">About Us</a></li>
+                        <li className={`${sectionInView == "about" && "relative after:absolute after:bg-primary after:w-full after:h-1 after:-bottom-10"}`}><a onClick={() => scrolltoSection("about")} className="xl:text-lg p-0">About Us</a></li>
                     </ul>
                 </div>
             </div>
