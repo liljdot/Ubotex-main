@@ -34,8 +34,10 @@ const Navbar: React.FC = () => {
             })
         }, { root: null, threshold: 0.5 })
 
-        const targetElement = document.getElementById("about")!
-        observer.observe(targetElement)
+        const targetElement = document.getElementById("about")
+        if (targetElement) {
+            observer.observe(targetElement)
+        }
     }, [])
 
     return (
