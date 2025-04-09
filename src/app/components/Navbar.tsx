@@ -27,7 +27,6 @@ const Navbar: React.FC = () => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    console.log("in view")
                     setSectionInView(entry.target.id)
                 } else {
                     setSectionInView("")
