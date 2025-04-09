@@ -1,3 +1,5 @@
+"use client"
+
 import { IoIosMenu } from "react-icons/io"
 import headerLogo from "@/app/assets/header-logo.png"
 import Image from "next/image"
@@ -11,6 +13,13 @@ const openSans = Open_Sans({
 })
 
 const Navbar: React.FC = () => {
+    const scrolltoSection = (id: string) => {
+        const target = document.getElementById(id || "")
+        if (target) {
+            console.log("target found")
+            target.scrollIntoView({ behavior: "smooth", block: "start" })
+        }
+    }
 
     return (
         <header className="w-full fixed bg-transparent/10 bg-clip-padding backdrop-filter backdrop-blur-2xl z-1000">
@@ -34,7 +43,7 @@ const Navbar: React.FC = () => {
                             <li><a className="text-base p-0">Ubotex Ltd</a></li>
                             <li><a className="text-base p-0">XO Wine Store</a></li>
                             <li><a className="text-base p-0">Evana Hotels</a></li>
-                            <li><a className="text-base p-0">About Us</a></li>
+                            <li><a onClick={() => scrolltoSection("about")} className="text-base p-0">About Us</a></li>
                         </ul>
                     </div>
 
@@ -43,7 +52,7 @@ const Navbar: React.FC = () => {
                         <li><a className="xl:text-lg p-0">Ubotex Ltd</a></li>
                         <li><DomainLink subDomain="xowine" className="xl:text-lg p-0">XO Wine Store</DomainLink></li>
                         <li><a className="xl:text-lg p-0">Evana Hotels</a></li>
-                        <li><a className="xl:text-lg p-0">About Us</a></li>
+                        <li><a onClick={() => scrolltoSection("about")} className="xl:text-lg p-0">About Us</a></li>
                     </ul>
                 </div>
             </div>
