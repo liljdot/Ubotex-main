@@ -16,7 +16,6 @@ const Navbar: React.FC = () => {
     const scrolltoSection = (id: string) => {
         const target = document.getElementById(id || "")
         if (target) {
-            console.log("target found")
             target.scrollIntoView({ behavior: "smooth", block: "start" })
         }
     }
