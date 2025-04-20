@@ -4,6 +4,7 @@ import commitmentImageDesktop from "@/app/assets/commitment-image-desktop.png";
 import { Open_Sans } from "next/font/google";
 import ActionButton from "../ActionButton";
 import { playfairDisplay } from "@/app/layout";
+import { whatsappContact } from "@/app/data";
 
 const openSans = Open_Sans({
     variable: "--font-open-sans",
@@ -28,7 +29,7 @@ const CommitmentSection: React.FC = () => {
                             At UBOTEX NG, we are committed to excellence, delivering top-quality cement and building materials, exceptional hospitality, and a curated selection of fine wines. Whether you're building, unwinding, or indulging, we bring quality to every experience. Strength, luxury, and refinement, always.
                         </p>
                         <div className="card-actions">
-                            <ActionButton to="" className="">Contact Us</ActionButton>
+                            <ActionButton to={whatsappContact} className="">Contact Us</ActionButton>
                         </div>
                     </div>
                 </div>
@@ -47,7 +48,7 @@ const CommitmentSection: React.FC = () => {
                                 We Are Committed to Excellence in Every Industry
                             </p>
                             <div className="card-actions">
-                                <ActionButton to="" className="bg-primary text-neutral">Contact Us</ActionButton>
+                                <ActionButton to={whatsappContact} className="bg-primary text-neutral">Contact Us</ActionButton>
                             </div>
                         </div>
                     </div>

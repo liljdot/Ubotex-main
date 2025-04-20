@@ -63,7 +63,7 @@ const ServicesSection: React.FC = () => {
 
     return (
         <>
-            <section className="bg-neutral flex flex-col pt-15 xl:pt-0 gap-6 md:gap-10 md:px-16 lg:px-26 xl:px-35 overflow-x-hidden">
+            <section id="services" className="bg-neutral flex flex-col pt-15 xl:pt-0 gap-6 md:gap-10 md:px-16 lg:px-26 xl:px-35 overflow-x-hidden">
                 <div className="flex flex-col gap-1 md:gap-3 px-10 md:px-0">
                     <h4 className="text-xl md:text-3xl lg:text-5xl xl:text-7xl text-primary font-medium">OUR SERVICES</h4>
 

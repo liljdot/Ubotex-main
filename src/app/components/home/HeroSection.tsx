@@ -2,20 +2,21 @@ import blueprintBG from "@/app/assets/blueprint-bg.png"
 import wineStoreImage from "@/app/assets/wine-store-image.png"
 import hotelImage from "@/app/assets/hotel-image.png"
 import constructionImage from "@/app/assets/construction-image.png"
-import ActionButton from "../ActionButton"
+import { ClickActionButton } from "../ActionButton"
 import { Open_Sans } from "next/font/google"
 import Image, { StaticImageData } from "next/image"
+import TargetButton from "../TargetButton"
 
 const openSans = Open_Sans({
     variable: '--font-open-sans',
     subsets: ["latin"]
 })
 
-const CardImage: React.FC<{image: StaticImageData}> = ({image}) => {
+const CardImage: React.FC<{ image: StaticImageData }> = ({ image }) => {
 
     return (
-        <figure className="flex shrink-0 w-51 h-39 sm:w-60 sm:h-50 md:w-60 md:h-50 lg:w-84 lg:h-72 xl:w-93 xl:h-100 bg-cover md:bg-center md:hover:bg-left-top bg-no-repeat md:hover:w-64 lg:hover:w-100 xl:hover:w-143 transition-all ease-in-out duration-300" style={{backgroundImage: `url(${image.src})`}}>
-            
+        <figure className="flex shrink-0 w-51 h-39 sm:w-60 sm:h-50 md:w-60 md:h-50 lg:w-84 lg:h-72 xl:w-93 xl:h-100 bg-cover md:bg-center md:hover:bg-left-top bg-no-repeat md:hover:w-64 lg:hover:w-100 xl:hover:w-143 transition-all ease-in-out duration-300" style={{ backgroundImage: `url(${image.src})` }}>
+
         </figure>
     )
 }
@@ -37,14 +38,14 @@ const HeroSection: React.FC = () => {
                     </p>
 
                     <div className="flex flex-row justify-center">
-                        <ActionButton to="" className="bg-primary text-neutral">Explore</ActionButton>
+                        <TargetButton targetId="services" className="bg-primary text-neutral">Explore</TargetButton>
                     </div>
                 </div>
 
                 <div className="md:bg-gradient-to-b from-neutral via-neutral via-50% to-primary to-50% flex md:justify-center flex-row gap-2 md:gap-4 md:py-5 lg:py-10 xl:py-20 overflow-x-scroll md:overflow-visible">
-                    <CardImage image={constructionImage}/>
-                    <CardImage image={hotelImage}/>
-                    <CardImage image={wineStoreImage}/>
+                    <CardImage image={constructionImage} />
+                    <CardImage image={hotelImage} />
+                    <CardImage image={wineStoreImage} />
                 </div>
             </section>
         </>
