@@ -7,6 +7,7 @@ import Link from "next/link"
 import { Open_Sans } from "next/font/google"
 import DomainLink from "./DomainLink"
 import { useEffect, useState } from "react"
+import { usePathname } from "next/navigation"
 
 const openSans = Open_Sans({
     variable: "--font-open-sans",
@@ -39,6 +40,7 @@ const Navbar: React.FC = () => {
     //         observer.observe(targetElement)
     //     }
     // }, [])
+    const pathname = usePathname()
 
     return (
         <header className="w-full fixed bg-transparent/10 bg-clip-padding backdrop-filter backdrop-blur-2xl z-1000">
@@ -58,7 +60,7 @@ const Navbar: React.FC = () => {
                             tabIndex={0}
                             className={`menu menu-sm dropdown-content bg-neutral text-primary gap-3 z-1 mt-3 min-w-40 w-fit shadow pl-3 pr-5 py-4 ${openSans.className}`}
                         >
-                            <li><a href="/" className="text-base p-0">Home</a></li>
+                            <li ><Link href="/" className="text-base p-0">Home</Link></li>
                             <li><DomainLink subDomain="ubotex-ltd" className="text-base p-0">Ubotex Ltd</DomainLink></li>
                             <li><a className="text-base p-0">XO Wine Store</a></li>
                             <li><a className="text-base p-0">Evana Hotels</a></li>
@@ -67,11 +69,11 @@ const Navbar: React.FC = () => {
                     </div>
 
                     <ul className={`menu menu-horizontal gap-6 text-primary px-1 hidden md:inline-flex ${openSans.className}`}>
-                        <li><a href="/" className="xl:text-lg p-0">Home</a></li>
+                        <li className={`${pathname == "/" && "relative after:absolute after:bg-primary after:w-full after:h-1 after:-bottom-10"}`}><Link href="/" className="xl:text-lg p-0">Home</Link></li>
                         <li><DomainLink subDomain="ubotex-ltd" className="xl:text-lg p-0">Ubotex Ltd</DomainLink></li>
                         <li><DomainLink subDomain="xowine" className="xl:text-lg p-0">XO Wine Store</DomainLink></li>
                         <li><a className="xl:text-lg p-0">Evana Hotels</a></li>
-                        <li className={``}><Link href={"/about"} className="xl:text-lg p-0">About Us</Link></li>
+                        <li className={`${pathname == "/about" && "relative after:absolute after:bg-primary after:w-full after:h-1 after:-bottom-10"}`}><Link href={"/about"} className="xl:text-lg p-0">About Us</Link></li>
                     </ul>
                 </div>
             </div>
