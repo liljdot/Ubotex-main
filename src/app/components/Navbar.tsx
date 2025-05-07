@@ -62,8 +62,8 @@ const Navbar: React.FC = () => {
                         >
                             <li ><Link href="/" className="text-base p-0">Home</Link></li>
                             <li><DomainLink subDomain="ubotex-ltd" className="text-base p-0">Ubotex Ltd</DomainLink></li>
-                            <li><a className="text-base p-0">XO Wine Store</a></li>
-                            <li><a className="text-base p-0">Evana Hotels</a></li>
+                            <li><DomainLink subDomain="xowine" className="text-base p-0">XO Wine Store</DomainLink></li>
+                            <li><DomainLink subDomain="evana-hotels" className="text-base p-0">Evana Hotels</DomainLink></li>
                             <li><Link href={"/about"} className="text-base p-0">About Us</Link></li>
                         </ul>
                     </div>
@@ -72,7 +72,7 @@ const Navbar: React.FC = () => {
                         <li className={`${pathname == "/" && "relative after:absolute after:bg-primary after:w-full after:h-1 after:-bottom-10"}`}><Link href="/" className="xl:text-lg p-0">Home</Link></li>
                         <li><DomainLink subDomain="ubotex-ltd" className="xl:text-lg p-0">Ubotex Ltd</DomainLink></li>
                         <li><DomainLink subDomain="xowine" className="xl:text-lg p-0">XO Wine Store</DomainLink></li>
-                        <li><a className="xl:text-lg p-0">Evana Hotels</a></li>
+                        <li><DomainLink subDomain="evana-hotels" className="xl:text-lg p-0">Evana Hotels</DomainLink></li>
                         <li className={`${pathname == "/about" && "relative after:absolute after:bg-primary after:w-full after:h-1 after:-bottom-10"}`}><Link href={"/about"} className="xl:text-lg p-0">About Us</Link></li>
                     </ul>
                 </div>
