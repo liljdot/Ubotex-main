@@ -95,7 +95,7 @@ const ServicesSection: React.FC = () => {
                         title="EVANA HOTELS"
                         phrase="Your Trusted Partner in Quality Building Materials"
                         content="We provide top-quality building materials for strength, durability, and excellence in every project. As a leading distributor, we offer premium cement, durable rods, high-quality ceiling boards, stylish and secure doors, versatile fasteners, vibrant paints, and top-brand zinc for reliable roofing."
-                        to="evanahotels"
+                        to="evana-hotels"
                         textColorClassName="text-[#3C120F]"
                         bgColorClassName="bg-[#3C120F]"
                         reversed
