@@ -29,7 +29,7 @@ const AboutSection: React.FC = () => {
                         EXCELLENCE, SUSTAINABILTY, HOSPITALITY
                     </h3>
 
-                    <p className={"text-base-content text-sm/7 md:text-base/9 md:font-semibold " + openSans.className}>
+                    <p className={"text-base-content text-sm/7 md:text-base/9 text-justify md:font-semibold " + openSans.className}>
                         Incorporated on September 17, 2002, under Nigerian law, Ubotex Limited was founded to distribute cement, building materials, and provide transport haulage services. With a share capital of ₦5,000,000, Ubong Bassey Obot holds the majority stake, alongside Ekaete Ubong Obot and Ubong Ubong Obot.
                         <br />
                         Committed to excellence, our experienced management team drives our success in a competitive market. We prioritize staff development and national integration while maintaining a strong track record of reliable service. Over the years, we have expanded our operations to include a hotel and a wine shop, further diversifying our business portfolio. Today, Ubotex Limited is a household name in cement distribution, transportation, hospitality, and retail, guided by a vision for quality and efficiency.
