@@ -15,7 +15,7 @@ const About: React.FC = () => {
         return (
             <div className="flex flex-col gap-4 md:gap-5 lg:gap-6 xl:gap-7.5 text-base-content ">
                 <h2 className="text-2xl md:text-3xl">{title}</h2>
-                <div className={"text-sm/7 md:text-base/10 md:text-justify " + openSans.className}>{children}</div>
+                <div className={"text-sm/7 md:text-base/10 text-justify " + openSans.className}>{children}</div>
             </div>
         )
     }
