@@ -1,6 +1,7 @@
 import blueprintBG from "@/app/assets/blueprint-bg.png"
 import wineStoreImage from "@/app/assets/wine-store-image.png"
 import hotelImage from "@/app/assets/hotel-image.png"
+import heroBG from "@/app/assets/hero-bg.png"
 import constructionImage from "@/app/assets/construction-image.png"
 import { Open_Sans } from "next/font/google"
 import { StaticImageData } from "next/image"
@@ -43,7 +44,7 @@ const HeroSection: React.FC = () => {
 
                 <div className="md:bg-[url(/gradient-bg.svg)] bg-cover bg-no-repeat flex md:justify-center flex-row gap-2 md:gap-4 md:py-5 lg:py-10 xl:py-20 overflow-x-scroll md:overflow-visible">
                     <CardImage image={constructionImage} />
-                    <CardImage image={hotelImage} />
+                    <CardImage image={heroBG} />
                     <CardImage image={wineStoreImage} />
                 </div>
             </section>

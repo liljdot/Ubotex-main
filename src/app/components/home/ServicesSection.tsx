@@ -3,6 +3,7 @@ import Image, { StaticImageData } from "next/image";
 import constructionCompanyImage from "@/app/assets/construction-company-image.png"
 import wineCompanyImage from "@/app/assets/wine-company-image.png"
 import hotelCompanyImage from "@/app/assets/hotel-image.png"
+import heroBG from "@/app/assets/hero-bg.png"
 import { DomainActionButton } from "../ActionButton";
 
 const openSans = Open_Sans({
@@ -91,7 +92,7 @@ const ServicesSection: React.FC = () => {
                     />
 
                     <BusinessCard
-                        image={hotelCompanyImage}
+                        image={heroBG}
                         title="EVANA HOTELS"
                         phrase="Your Trusted Partner in Quality Building Materials"
                         content="We provide top-quality building materials for strength, durability, and excellence in every project. As a leading distributor, we offer premium cement, durable rods, high-quality ceiling boards, stylish and secure doors, versatile fasteners, vibrant paints, and top-brand zinc for reliable roofing."
