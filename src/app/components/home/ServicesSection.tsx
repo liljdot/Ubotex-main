@@ -91,7 +91,7 @@ const ServicesSection: React.FC = () => {
                         bgColorClassName="bg-[#990100]"
                     />
 
-                    <BusinessCard
+                    {/* <BusinessCard
                         image={heroBG}
                         title="EVANA HOTELS"
                         phrase="Your Trusted Partner in Quality Building Materials"
@@ -100,7 +100,7 @@ const ServicesSection: React.FC = () => {
                         textColorClassName="text-[#3C120F]"
                         bgColorClassName="bg-[#3C120F]"
                         reversed
-                    />
+                    /> */}
                 </div>
             </section>
         </>
