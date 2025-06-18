@@ -15,7 +15,7 @@ const openSans = Open_Sans({
 const CardImage: React.FC<{ image: StaticImageData }> = ({ image }) => {
 
     return (
-        <figure className="flex shrink-0 w-51 h-39 sm:w-60 sm:h-50 md:w-60 md:h-50 lg:w-84 lg:h-72 xl:w-93 xl:h-100 bg-cover md:bg-center md:hover:bg-left-top bg-no-repeat md:hover:w-64 lg:hover:w-100 xl:hover:w-143 transition-all ease-in-out duration-300" style={{ backgroundImage: `url(${image.src})` }}>
+        <figure className="flex shrink-0 w-1/2 h-45 sm:h-50 md:w-1/3 md:h-50 lg:w-1/3 lg:h-72 xl:w-1/3 xl:h-100 bg-cover md:bg-center md:hover:bg-left-top bg-no-repeat md:hover:w-3/7 lg:hover:w-3/7 xl:hover:w-3/7 transition-all ease-in-out duration-300" style={{ backgroundImage: `url(${image.src})` }}>
 
         </figure>
     )
@@ -44,7 +44,6 @@ const HeroSection: React.FC = () => {
 
                 <div className="md:bg-[url(/gradient-bg.svg)] bg-cover bg-no-repeat flex md:justify-center flex-row gap-2 md:gap-4 md:py-5 lg:py-10 xl:py-20 overflow-x-scroll md:overflow-visible">
                     <CardImage image={constructionImage} />
-                    <CardImage image={heroBG} />
                     <CardImage image={wineStoreImage} />
                 </div>
             </section>
